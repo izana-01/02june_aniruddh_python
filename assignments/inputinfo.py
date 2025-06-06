@@ -1,0 +1,6 @@
+a =input("enter your name:-" )
+b = input("enter your age:- ")
+c = input("enter your mobile no.:-")
+print("hi , ", a)
+print("i see so ur age is", b)
+print ("and ur mobile no is", c)
