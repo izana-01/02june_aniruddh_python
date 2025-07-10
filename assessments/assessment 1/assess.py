@@ -10,7 +10,7 @@ def bank_manager():
         print("\n \t 1) add customer")
         print("\n \t 2) view customer")
         print("\n \t 3) search customer")
-        print("\n \t 4) view customer")
+        print("\n \t 4) view all customer")
         print("\n \t 5) total amount in bank")
 
         choice= int(input("\n \t Enter your choice: "))
