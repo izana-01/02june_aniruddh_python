@@ -7,5 +7,4 @@ print(colors)
 
 length_of_list = len(colors)
 
-
 print("\nThe number of elements in the list is:", length_of_list)

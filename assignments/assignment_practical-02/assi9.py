@@ -6,5 +6,5 @@ for i in range(1, 6):
     numbers.append(i)
 
 
-print("List after inserting elements using append:")
+print("List after using append:")
 print(numbers)
