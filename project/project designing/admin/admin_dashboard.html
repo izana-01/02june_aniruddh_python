@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - E-Police Station</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    header {
+      background-color: #002b5c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #002b5c;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      background-color: #eaf0f8;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #003366;
+    }
+
+    .icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+      color: #002b5c;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Admin Dashboard - E-Police Station</h1>
+  </header>
+
+  <div class="container">
+    <h2>Admin Control Panel</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">🏢</div>
+        <h3>Manage Police Station</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">📂</div>
+        <h3>Manage Crime Category</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">📁</div>
+        <h3>Manage Crime Sub-Category</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">👥</div>
+        <h3>Manage Users</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">👮‍♂️</div>
+        <h3>Manage Inspector</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">👮‍♀️</div>
+        <h3>Manage Sub Inspector</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">📋</div>
+        <h3>View FIR/Complaint Detail</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">💬</div>
+        <h3>Manage User Feedback</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">📜</div>
+        <h3>Rules & Regulation</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚨</div>
+        <h3>Emergency Information</h3>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

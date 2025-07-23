@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visitor Page - E-Police Station</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f4f9ff;
+    }
+
+    header {
+      background-color: #001f33;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: #e0f0ff;
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+      color: #005599;
+    }
+
+    .card h3 {
+      margin: 0;
+      color: #002244;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Visitor Information - E-Police Station</h1>
+  </header>
+
+  <div class="container">
+    <h2>Public Information & Services</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">🧍‍♂️🔍</div>
+        <h3>Missing Person Details</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">📜</div>
+        <h3>Rules & Regulations</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚨</div>
+        <h3>Emergency Information</h3>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

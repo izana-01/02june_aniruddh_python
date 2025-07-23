@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>E-Police Station - Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f6fc;
+    }
+    header {
+      background-color: #002244;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #002244;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+      text-decoration: none;
+      color: #002244;
+      font-weight: bold;
+    }
+    .card:hover {
+      background-color: #dceeff;
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to E-Police Station</h1>
+  </header>
+  <div class="container">
+    <h2>Choose Your Module</h2>
+    <div class="grid">
+      <a class="card" href="admin/admin_dashboard.html">🔐 Admin</a>
+      <a class="card" href="commissioner/commissioner_dashboard.html">🏢 Police Commissioner</a>
+      <a class="card" href="citizen/citizen_dashboard.html">🧑‍💼 Citizen</a>
+      <a class="card" href="inspector/inspector_dashboard.html">👮 Inspector</a>
+      <a class="card" href="visitor/visitor_info.html">👀 Visitor</a>
+    </div>
+  </div>
+</body>
+</html>

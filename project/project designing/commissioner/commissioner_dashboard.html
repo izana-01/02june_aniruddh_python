@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Commissioner Dashboard - E-Police Station</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f5f9fc;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background-color: #e7f0fa;
+    }
+
+    .icon {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #003366;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #002244;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Commissioner Dashboard - E-Police Station</h1>
+  </header>
+
+  <div class="container">
+    <h2>Control Panel</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">🔐</div>
+        <h3>Login</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">📌</div>
+        <h3>Manage Police Info Area-wise</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">👮‍♂️</div>
+        <h3>Manage Inspector</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">🧍‍♂️</div>
+        <h3>Manage Constable</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">📄</div>
+        <h3>View FIR</h3>
+      </div>
+
+      <div class="card">
+        <div class="icon">📝</div>
+        <h3>View Complaint</h3>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
