@@ -3,7 +3,7 @@ from tkinter import ttk, messagebox
 
 def register():
     
-    if not name_var.get() or not contact_var.get() or not email_var.get() or not gender_var.get() not in ["Male", "Female"] or not city_var.get() == "Select City" or state_var.get() == "Select State":
+    if not name_var.get() or not contact_var.get() or not email_var.get() or not gender_var.get() not in ["Male", "Female"] or not city_var.get() == "Select City" or not state_var.get() == "Select State":
         error_label.config(text="fill the empty field!!!")
     else:
         error_label.config(text="")
