@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctors List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+    <h1 class="text-3xl font-bold mb-6 text-center">Doctors Information</h1>
+
+    <div class="max-w-4xl mx-auto bg-white shadow-lg p-6 rounded-lg">
+        <table class="w-full border-collapse border border-gray-300">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="border p-3">Name</th>
+                    <th class="border p-3">Specialization</th>
+                    <th class="border p-3">Experience</th>
+                    <th class="border p-3">More</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for doctor in doctors %}
+                <tr class="hover:bg-gray-100">
+                    <td class="border p-3">{{ doctor.name }}</td>
+                    <td class="border p-3">{{ doctor.specialization }}</td>
+                    <td class="border p-3">{{ doctor.experience }} Years</td>
+                    <td class="border p-3 text-center">
+                        <a href="{% url 'doctor_detail' doctor.id %}" class="text-blue-600 hover:underline">
+                            View Details
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+
+</body>
+</html>

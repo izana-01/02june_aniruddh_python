@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-pink-50 flex items-center justify-center p-6">
+
+    <div class="w-full max-w-md bg-white/90 backdrop-blur-sm border border-gray-100 rounded-3xl shadow-2xl p-8">
+        <!-- header -->
+        <div class="flex flex-col items-center mb-6">
+            <div class="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 text-white text-2xl font-semibold shadow-lg">
+                IG
+            </div>
+            <h1 class="mt-4 text-2xl font-semibold text-gray-800">Create your account</h1>
+            <p class="text-sm text-gray-500 mt-1">Join and start sharing moments</p>
+        </div>
+
+        <!-- form -->
+        <form method="POST" class="space-y-4">
+            {% csrf_token %}
+
+            <label class="block text-sm font-medium text-gray-700">Username</label>
+            <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+                    <!-- user icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1118.879 6.196 9 9 0 015.12 17.804zM15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </span>
+                <input name="username" type="text" required
+                             class="w-full pl-10 pr-3 py-2 border border-gray-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-indigo-400"
+                             placeholder="Choose a username" />
+            </div>
+
+            <label class="block text-sm font-medium text-gray-700">Password</label>
+            <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+                    <!-- lock icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.657 0 3-1.343 3-3V6a3 3 0 10-6 0v2c0 1.657 1.343 3 3 3z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11h14v8a2 2 0 01-2 2H7a2 2 0 01-2-2v-8z" />
+                    </svg>
+                </span>
+                <input name="password" type="password" required
+                             class="w-full pl-10 pr-3 py-2 border border-gray-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-indigo-400"
+                             placeholder="Create a strong password" />
+            </div>
+
+            <p class="text-xs text-gray-500">Use 8 or more characters with a mix of letters and numbers.</p>
+
+            <button type="submit" class="w-full mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-2.5 font-medium shadow-md hover:from-indigo-600 hover:to-pink-600 transition">
+                Register
+            </button>
+        </form>
+
+        <div class="mt-5 text-center text-sm text-gray-600">
+            Already have an account?
+            <a href="{% url 'insta:login' %}" class="text-indigo-600 font-medium hover:underline">Log in</a>
+        </div>
+    </div>
+
+</body>
+</html>

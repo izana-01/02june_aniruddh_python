@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Website — Home</title>
+  <meta name="description" content="A clean first page template you can reuse for any project." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #5865f2;
+      --ink: #0f172a; /* slate-900 */
+      --muted: #475569; /* slate-600 */
+      --bg: #f8fafc;   /* slate-50 */
+    }
+    html, body { height: 100%; }
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--ink);
+      background: var(--bg);
+    }
+    .navbar-brand strong { letter-spacing: 0.5px; }
+    .btn-brand { background: var(--brand); border-color: var(--brand); }
+    .btn-brand:hover, .btn-brand:focus { filter: brightness(0.95); }
+    .hero {
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(88,101,242,.25), transparent 60%),
+                  radial-gradient(1000px 500px at -10% 10%, rgba(88,101,242,.18), transparent 60%);
+      padding: clamp(3rem, 6vw, 6rem) 0;
+    }
+    .hero h1 { font-weight: 800; letter-spacing: -0.5px; }
+    .hero p.lead { color: var(--muted); max-width: 56ch; }
+    .feature-icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: white; box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08); }
+    .glass-card { background: rgba(255,255,255,0.75); backdrop-filter: blur(6px); border: 1px solid rgba(15,23,42,0.06); }
+    footer a { color: inherit; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <span class="feature-icon"><span class="fw-bold" aria-hidden>★</span></span>
+        <strong>MyWebsite</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+        </ul>
+        <div class="ms-lg-3 mt-3 mt-lg-0">
+          <a href="#contact" class="btn btn-brand text-white">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h1 class="display-5 mb-3">Build something <span class="text-primary">amazing</span> today</h1>
+          <p class="lead mb-4">A ready-to-use first page (HTML + Bootstrap). Clean, responsive, and fast to customize for portfolios, startups, or projects.</p>
+          <div class="d-flex gap-2">
+            <a href="#features" class="btn btn-brand text-white btn-lg">See Features</a>
+            <a href="#about" class="btn btn-outline-dark btn-lg">Learn More</a>
+          </div>
+          <p class="mt-3 small text-muted">No setup needed. Just paste into an <code>.html</code> file and open in your browser.</p>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-4 glass-card rounded-4 shadow-sm">
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+              <iframe
+                title="Intro video placeholder"
+                srcdoc='<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{margin:0;display:grid;place-items:center;height:100vh;background:linear-gradient(135deg,#eef2ff,#fff);}h2{font-family:Inter,system-ui,sans-serif;opacity:.8}</style></head><body><h2>Drop in a video or image here</h2></body></html>'
+                loading="lazy"
+                class="border">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features -->
+  <section id="features" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">What you get</h2>
+        <p class="text-muted">Essential, modern building blocks you can tweak quickly.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3"><span class="fw-bold" aria-hidden>1</span></div>
+              <h5 class="card-title">Responsive Layout</h5>
+              <p class="card-text text-muted">Looks great on mobile and desktop with Bootstrap's grid system.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3"><span class="fw-bold" aria-hidden>2</span></div>
+              <h5 class="card-title">Ready Components</h5>
+              <p class="card-text text-muted">Navbar, hero, cards, and a contact form already wired up.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3"><span class="fw-bold" aria-hidden>3</span></div>
+              <h5 class="card-title">Clean Aesthetic</h5>
+              <p class="card-text text-muted">Soft shadows, rounded corners, and ample white space by default.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <img class="img-fluid rounded-4 shadow-sm" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1200&auto=format&fit=crop" alt="Team working together" />
+        </div>
+        <div class="col-lg-6">
+          <h3 class="fw-bold">About this template</h3>
+          <p class="text-muted">This single HTML file uses Bootstrap 5 CDN and a tiny bit of custom CSS. Duplicate sections or change the content to match your brand.</p>
+          <ul class="list-unstyled small text-muted">
+            <li>• Replace the logo with yours</li>
+            <li>• Edit colors in the <code>:root</code> variables</li>
+            <li>• Add more sections as needed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Contact us</h2>
+        <p class="text-muted">Send a quick message—this form is ready to hook to your backend.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form class="card p-4 shadow-sm border-0 rounded-4 bg-white" onsubmit="event.preventDefault(); alert('You have sent your concerns to us successfully.');">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end mt-4">
+              <button type="submit" class="btn btn-brand text-white px-4">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-white border-top">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div class="small text-muted">© <span id="year"></span> MyWebsite. All rights reserved.</div>
+      <div class="small d-flex gap-3">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#contact">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <h1>number of visitor you are : {{number}} </h1>
+  
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+
+    <h1 class="text-3xl font-bold text-center mb-8">Admin Dashboard</h1>
+
+    <!-- USERS LIST -->
+    <div class="max-w-5xl mx-auto mb-10 bg-white p-6 shadow rounded-xl">
+        <h2 class="text-2xl font-semibold mb-4">All Users</h2>
+
+        <table class="w-full border border-gray-300">
+            <thead class="bg-gray-200">
+                <tr>
+                    <th class="border p-2">ID</th>
+                    <th class="border p-2">Username</th>
+                    <th class="border p-2">Date Joined</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for u in users %}
+                <tr>
+                    <td class="border p-2">{{ u.id }}</td>
+                    <td class="border p-2">{{ u.username }}</td>
+                    <td class="border p-2">{{ u.date_joined }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- POSTS LIST -->
+    <div class="max-w-5xl mx-auto bg-white p-6 shadow rounded-xl">
+        <h2 class="text-2xl font-semibold mb-4">All Posts</h2>
+
+        <table class="w-full border border-gray-300">
+            <thead class="bg-gray-200">
+                <tr>
+                    <th class="border p-2">ID</th>
+                    <th class="border p-2">User</th>
+                    <th class="border p-2">Title</th>
+                    <th class="border p-2">Created At</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in posts %}
+                <tr>
+                    <td class="border p-2">{{ p.id }}</td>
+                    <td class="border p-2">{{ p.user.username }}</td>
+                    <td class="border p-2">{{ p.title }}</td>
+                    <td class="border p-2">{{ p.created_at }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
