@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="box">
+    <h2>Registration Form</h2>
+
+    <form id="regForm" method="POST" novalidate>
+        {% csrf_token %}
+
+        <label>Full Name</label>
+        {{ form.full_name }}
+        <p class="error" id="nameError"></p>
+
+        <label>Email</label>
+        {{ form.email }}
+        <p class="error" id="emailError"></p>
+
+        <label>Phone</label>
+        {{ form.phone }}
+        <p class="error" id="phoneError"></p>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script src="{% static 'js/validation.js' %}"></script>
+
+</body>
+</html>

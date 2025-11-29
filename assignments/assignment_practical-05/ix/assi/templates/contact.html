@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white shadow-2xl rounded-2xl p-8 max-w-md w-full text-center">
+
+        <h1 class="text-2xl font-bold text-green-700 mb-6">Contact Us</h1>
+
+        <div class="bg-gray-100 p-6 rounded-xl shadow-inner">
+            <p class="text-gray-700">
+                Email: <span class="font-semibold">support@doctorfinder.com</span>
+            </p>
+
+            <p class="text-gray-700 mt-2">
+                Phone: <span class="font-semibold">+91 9876543210</span>
+            </p>
+
+            <p class="text-gray-700 mt-2">
+                Address: <span class="font-semibold">Mumbai, India</span>
+            </p>
+        </div>
+
+        <a href="{% url 'home' %}" 
+           class="mt-6 inline-block px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+           Back to Home
+        </a>
+
+    </div>
+
+</body>
+</html>
