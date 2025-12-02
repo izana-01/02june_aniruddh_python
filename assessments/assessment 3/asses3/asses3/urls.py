@@ -20,6 +20,6 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('admin-panel/', RedirectView.as_view(url='/admin/', permanent=False)),
     path('', include('insta.urls')),
+    path('adminapp/', include('adminapp.urls')) 
 ]
