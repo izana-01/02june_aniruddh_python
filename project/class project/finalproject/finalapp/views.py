@@ -12,26 +12,37 @@ def index(request):
     return render(request,'index.html',{'user':user})
 
 def notes(request):
-    user=request.session.get("user")
-    username=UserSignup.objects.get(email=user)
-    if request.method=='POST':
-        form=NotesForm(request.POST,request.FILES)
-        if form.is_valid():
-            x=form.save(commit=False)
-            x.status="Pending"
-            x.email=username
-            x.save()
-            print("Notes Subitted!")
-            return redirect("/")
+    try:
+        user=request.session.get("user")
+        username=UserSignup.objects.get(email=user)
+        if request.method=='POST':
+            form=NotesForm(request.POST,request.FILES)
+            if form.is_valid():
+                x=form.save(commit=False)
+                x.status="Pending"
+                x.email=username
+                x.save()
+                print("Notes Subitted!")
+                return redirect("/")
 
-        else:
-            print(form.errors)
-    return render(request,'notes.html')
+            else:
+                print(form.errors)
+    except:
+        print("Error")
+    return render(request,'notes.html',{'user':user})
 
 def about(request):
     return render(request,'about.html')
 
 def contact(request):
+    if request.method=='POST':
+        form=ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            print("Form has been submitted!")
+            return redirect('contact')
+        else:
+            print(form.errors)
     return render(request,'contact.html')
 
 def profile(request):
@@ -65,7 +76,7 @@ def signin(request):
             print("Error!Login Faild...")
     return render(request,'signin.html')
 
-
+otp=0
 def signup(request):
     msg=""
     if request.method=='POST':
@@ -80,6 +91,7 @@ def signup(request):
                 print("Signup Successfully!")
                 
                 #Email Sending code
+                global otp
                 otp=random.randint(11111,99999)
                 send_mail(subject="Your OTP",message=f'''Dear User!\n\n
                           Thanks for using our service!\n
@@ -97,7 +109,7 @@ def signup(request):
 def userlogout(request):
     logout(request)
     return redirect('signin')
-
+    
 def otpverify(request):
     msg=""
     global otp

@@ -10,7 +10,7 @@ class NotesForm(forms.ModelForm):
     class Meta:
         model=Mynotes
         fields=["title","desc","files","cate"]
-
+        
 class ContactForm(forms.ModelForm):
     class Meta:
         model=Contact

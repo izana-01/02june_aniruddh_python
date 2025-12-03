@@ -24,6 +24,7 @@ class Mynotes(models.Model):
     status=models.CharField(choices=statuschoice,max_length=50)
     updated_at=models.DateTimeField(blank=True,null=True)
     
+
 class Contact(models.Model):
     submitted_at=models.DateTimeField(auto_now_add=True)
     fullname=models.CharField(max_length=100)
