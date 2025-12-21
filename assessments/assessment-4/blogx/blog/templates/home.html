@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlogX - Home</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body { background: #f8f9fa; }
+.navbar { margin-bottom: 30px; }
+.card img { max-height: 200px; object-fit: cover; }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">BlogX</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        {% if user.is_authenticated %}
+        <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'create_post' %}">New Post</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+        <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Register</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    {% for post in posts %}
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        {% if post.cover_image %}
+        <img src="{{ post.cover_image.url }}" class="card-img-top">
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ post.content|truncatechars:100 }}</p>
+          <p class="card-text"><small>By {{ post.author.username }} | {{ post.likes.count }} Likes | {{ post.comments.count }} Comments</small></p>
+          <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <p>No posts found.</p>
+    {% endfor %}
+  </div>
+</div>
+</body>
+</html>
